@@ -2,13 +2,13 @@
 
 ![alt text](https://github.com/mziad97/Kangaroo-detector/blob/main/gif_frame_006.jpg)
 
-## utilized the checkpoints (weights) of "SSD ResNet50 V1 FPN 640x640 (RetinaNet50)" from 
-[object detection zoo](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md) to predict the kangaroo and its bounding box.
+## The Detection model
+ it's "SSD ResNet50 V1 FPN 640x640 (RetinaNet50)". The checkpoints (weights) can be found at [object detection zoo](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md).
 
-### fine-tuned the box and class heads, and kept the feature extractor layers.
+I've fine-tuned the box and class heads, and kept weights of the feature extractor layers.
 
 ## used utilities from [object detection API](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2.md)
-1. config_util: to import the model configuration from pipiline_file
+1. config_util: to import the model configuration from pipeline_file
 2. visualization_utils: to draw the bounding boxes, classes, and scores on the image2
 3. colab_utils: to annotate the objects in the image
 4. model_builder: build the model from the its configuration
